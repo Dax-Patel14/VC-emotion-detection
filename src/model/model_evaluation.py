@@ -70,9 +70,9 @@ def save_metrics(metrics: dict, output_path: str):
         logger.exception(f"Error while saving metrics: {e}")
 
 def main():
-    model_path = 'model.pkl'
-    test_data_path = './data/features/test_bow.csv'
-    metrics_output_path = 'metrics.json'
+    model_path = 'models\model.pkl'
+    test_data_path = './data/processed/test_bow.csv'
+    metrics_output_path = './reports/metrics.json'
 
     model = load_model(model_path)
     if model is None:
